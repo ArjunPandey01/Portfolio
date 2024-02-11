@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/Tpuimg.png" alt="">
+               
+            </div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="fas">
+                    <i class="fa-solid fa-xmark"onclick="closemenu()"></i>
+                </div>
+                </ul>
+                <div class="fas1">
+                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+            </div>
+
+            </div>
+            </nav>
+            <div class="header-text">
+                <p>WEB DEVELOPER</p>
+                <h1>Hi,I'm <span>Arjun </span>  <br>Pandey From   <SPAn1>IN</SPAn1><span3>D</span3><span2>IA</span2></h1>
+            </div>
+        </div>
+        
+    </div>
+    <!----------------------------------------------------------------about---------------------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                 <img src="images/aker.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a 15-year-old boy in 9th grade, possesses a passion for designing web interfaces that sets me apart. My youthful curiosity fuels a creative drive, delving into the intricate world of web design With a knack for blending aesthetics and functionality, I channels my skills to craft visually appealing and user-friendly digital experiences. As I navigates the dynamic landscape of adolescence, my dedication to honing design skills showcases a promising journey ahead.  My age may be tender, but my enthusiasm and talent in web interface design and more skills speak volumes about my potential in the evolving realm of digital creativity.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Designing Web Interfaces</li>
+                            <li><span>java</span><br>Advance Level</li>
+                            <li><span>Video Editing</span><br>Advance reel/Video editing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Previous School</span><br>St Joseph Convent School</li>
+                            <li><span>Current School</span><br>Seth Anandram Jaipuria School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+    
+    <!---------------------------services---------------------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Web Designing(frontened)/Portfolio service if you are searching for that  then you are on right website kindly share a brief idea of the service you want through Contact form.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>JAVA Debugging</h2>
+                    <p>Currently no service available <br> Service Available Soon.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Video Editing</h2>
+                    <p>If you want your Video/Reel to be edited with perfection(Professionaly) then send us a small message through our Contact Form our team will contact you within 24 hours.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------contact------------------------------------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="goat">Contact Me</h1>
+                    <P><i class="fas fa-paper-plane"></i>pandeyarjun2121@gmail.com</P>
+                    <div class="social-icons">
+                        <a href=""></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="Text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="Email" placeholder="Your Email"required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                        
+            </div>
+        </div>
+        <div class="copyright">
+            <P>Copyright © Arjun.co</P>
+        </div>
+    </div>
+
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+                for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            
+        }
+    </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+            
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWCLwDo8RwQxxgpTaOq6cRWdGWv4i5_LPUAsbTF6maZR0ni46Gif7qSrDTTj8g6-7AIw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent Succesfully"
+                setTimeout(function(){
+                    msg.innerHTML =""
+
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
